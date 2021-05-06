@@ -21,6 +21,14 @@ namespace ScabbleScore.Test
       char letter = word[0];
       Assert.AreEqual(numberString, letter);
     }
+    [TestMethod]
+    public void AddingLetterValue_FromUserIndexInput_NumberFromIndexedLetter()
+    {
+      int value = ScrabbleScore.AddingLetterValue('e');
+      int letterValue = 1;
+      Assert.AreEqual(value, letterValue);
+    }
+
 
   }
 }
