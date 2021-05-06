@@ -28,6 +28,17 @@ namespace ScabbleScore.Test
       int letterValue = 1;
       Assert.AreEqual(value, letterValue);
     }
+    [TestMethod]
+    public void GetTotalOne_FromUserIndexInput_UserOneTotal()
+    {
+      ScrabbleScore newConstructor = new ScrabbleScore(2, 3);
+      int total = newConstructor.GetTotalOne();
+      int currentTotal = 2;
+
+      // newConstructor.SetTotalOne();
+      Assert.AreEqual(total, currentTotal);
+    }
+
 
 
   }
