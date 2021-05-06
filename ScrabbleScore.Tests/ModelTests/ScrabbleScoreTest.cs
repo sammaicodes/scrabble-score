@@ -7,10 +7,20 @@ namespace ScabbleScore.Test
   public class ScrabbleScoreTest
   {
     [TestMethod]
-    public void CalculateScrabbleScore_ReceiveUserInput_word()
+    public void GetScrabbleWord_ReceiveUserInput_word()
     {
-      string userWord = ScrabbleScore.CalculateScrabbleScore("peach");
+      string userWord = ScrabbleScore.GetScrabbleWord("peach");
       Assert.AreEqual(userWord, "peach");
     }
+    [TestMethod]
+    public void FindScrabbleLetter_GetAnIndex_IndexNumber()
+    {
+      char numberString = ScrabbleScore.FindScrabbleLetter("peach");
+
+      string word = "peach";
+      char letter = word[0];
+      Assert.AreEqual(numberString, letter);
+    }
+
   }
 }
